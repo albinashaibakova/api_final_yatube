@@ -20,7 +20,7 @@ class FollowSerializer(serializers.ModelSerializer):
         slug_field='username',
         queryset=User.objects.all()
     )
-    
+
     class Meta:
         model = Follow
         fields = "__all__"
@@ -47,7 +47,7 @@ class GroupSerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField(
         read_only=True,
-        default = serializers.CurrentUserDefault()
+        default=serializers.CurrentUserDefault()
     )
     group = serializers.PrimaryKeyRelatedField(
         queryset=Group.objects.all(),
