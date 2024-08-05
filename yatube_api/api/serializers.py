@@ -11,10 +11,10 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('username', 'password')
 
 
-class  FollowSerializer(serializers.ModelSerializer):
+class FollowSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(
         read_only=True,
-        default = serializers.CurrentUserDefault()
+        default=serializers.CurrentUserDefault()
     )
     following = serializers.SlugRelatedField(
         slug_field='username',

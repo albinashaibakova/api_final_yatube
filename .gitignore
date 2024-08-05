@@ -148,3 +148,9 @@ dmypy.json
 # папки со статикой и медиа
 media/
 yatube_api/posts/static/
+/yatube_api/posts/admin.py
+/yatube_api/posts/tests.py
+/yatube_api/api/tests.py
+/yatube_api/api/models.py
+/yatube_api/posts/views.py
+/yatube_api/api/admin.py
